@@ -6,11 +6,8 @@ const data = require('./data.json');
 
 
 export default function Hero(props) {
-    const defaults = {
-        size: 'md'
-    };
 
-    const { name, size, talents } = Object.assign(defaults, props);
+    const { name, talents } = props;
 
     const hero = Object.values(data).filter((h) => h.shortName === name)[0];
 
@@ -18,9 +15,16 @@ export default function Hero(props) {
         throw new Error(`Hero named ${name} not found`);
     }
 
+    const defaults = {
+        size: 'md',
+        label: hero.name
+    }
+    
+    const p = Object.assign(defaults,props);
+
     return (
         <>
-            <HeroPortrait name={name} label={hero.name} size={size} />
+            <HeroPortrait name={name} {...p} />
             {talents ? <Talents talents={hero.talents} selections={talents} /> : null}
         </>
     );

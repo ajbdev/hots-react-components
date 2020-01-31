@@ -8,3 +8,7 @@
 .heroMenu > * {
     margin: 2px;
 }
+
+.pickerLabel {
+    padding-left: 6px;
+}

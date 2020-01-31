@@ -7,11 +7,19 @@ const css = require('./HeroPicker.module.css')
 
 const data = require('./data.json');
 
-const options = Object.values(data).map((h) => { return { value: h.shortName, label: h.name } });
-
-const Option = ({ children, ...props }) => (
-    <components.Option {...props} />
-)
+const options = Object.values(data).map((h) => { 
+    return { 
+        value: h.shortName, 
+        label: (
+            <>
+                <HeroPortrait name={h.shortName} size="xs" />
+                <span className={css.pickerLabel}>
+                    {h.name}
+                </span>
+            </>
+        )
+    } 
+});
 
 export default function HeroDropdown(props) {
     const { showHeroThumbnail } = props;

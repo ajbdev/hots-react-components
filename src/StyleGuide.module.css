@@ -1,0 +1,14 @@
+.app {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.exampleSection {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.exampleSection > * {
+    margin: 5px;
+}

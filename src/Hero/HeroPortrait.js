@@ -7,15 +7,23 @@ const Styles = {
     HEXAGON: 'hexagon'
 };
 
+function classes(props) {
+    const classes = [ props.size ? css[props.size] : css.md, css.heroPortrait ];
+
+    if (props.hideBorder) {
+        classes.push(css.noBorder)
+    }
+
+    return classes.join(' ');
+}
+
 export default function HeroPortrait(props) {
     const { name, size, style, label, header, children } = props;
-
-    const sizeCss = size ? css[size] : css.md;
 
     const bgStyle = { backgroundImage: `url('/images/heroes/${name}.png')`};
  
     return (
-        <div style={bgStyle} className={`${sizeCss} ${css.heroPortrait}`}>
+        <div style={bgStyle} className={`${classes(props)}`}>
              {children ? children : null}
              {label ? <span className={css.label}>{label}</span> : null}
         </div>

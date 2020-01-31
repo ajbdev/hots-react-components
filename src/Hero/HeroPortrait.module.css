@@ -3,7 +3,7 @@
     border-style: solid;
     border-color: rgba(86, 120, 229, .9);
     display: inline-block;
-    vertical-align: bottom;
+    vertical-align: middle;
     position: relative;
     line-height: 1.2rem;
     user-select: none;
@@ -12,6 +12,18 @@
     overflow: hidden;
     background-size: contain;
 }
+
+.noBorder {
+    border: 0;
+}
+
+.label {
+    position: absolute;
+    bottom: 0;
+    left: 3px;
+    text-shadow: 1px 1px #000;
+}
+
 
 .lg {
     border-width: 3px;
@@ -25,21 +37,13 @@
 }
 
 .sm {
-    font-size: .8;
-    zoom: 0.5;
-    width: 32px;
-    height: 32px;
+    font-size: 12px;
+    font-weight: normal;
+    width: 40px;
+    height: 40px;
 }
 
 .xs {
-    zoom: 0.33;
     width: 22px;
     height: 22px;
-}
-
-.label {
-    position: absolute;
-    bottom: 0;
-    left: 3px;
-    text-shadow: 1px 1px #000;
 }
