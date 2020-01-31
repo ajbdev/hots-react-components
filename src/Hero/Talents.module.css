@@ -1,0 +1,16 @@
+.talent {
+    width: 64px;
+    height: 64px;
+    display: inline-block;
+    background-size: cover;
+    border: 1px solid rgb(156, 156, 156);
+}
+
+.talent > div {
+    font-size: 36px;
+}
+
+.missing {
+    color: #fff;
+    text-align: center;
+}

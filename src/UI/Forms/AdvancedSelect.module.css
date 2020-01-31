@@ -1,0 +1,13 @@
+.select {
+    min-width: 300px;
+}
+
+:global(.AdvancedSelect__control) {
+    border: 3px solid rgb(44, 31, 91);
+    color: rgba(170, 157, 243, 0.9);
+    font-size: 1.2rem;
+    padding: .3rem;
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, transparent 1%, rgb(27, 19, 56) 100%);
+
+}

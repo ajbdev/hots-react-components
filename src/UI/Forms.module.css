@@ -1,0 +1,63 @@
+.button {
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgba(86, 120, 229, .9);
+    font-size: 1.8rem;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+    vertical-align: middle;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0,0,0,1);
+    padding: .4rem 6rem;
+    align-items: flex-start;
+    color: rgba(255,255,255,.9);
+    box-shadow: 0 0 10px rgb(102, 21, 134);
+    background: rgb(23, 20, 23);
+    background-image: radial-gradient(ellipse at top, rgb(102, 21, 134), transparent 60%),
+            radial-gradient(ellipse at bottom, rgb(104, 78, 196), transparent 60%),
+            linear-gradient(to bottom, transparent 1%, rgba(120,120,120,.35) 50%,transparent  51%)
+    ;
+}
+
+.button:hover {
+    border-color: rgb(146, 172, 255);
+    color: #fff;
+    background-image: radial-gradient(ellipse at top, rgb(150, 52, 189), transparent 60%),
+            radial-gradient(ellipse at bottom, rgb(130, 104, 223), transparent 60%),
+            linear-gradient(to bottom, transparent 1%, rgba(120,120,120,.35) 50%,transparent  51%)
+}
+
+.button[disabled] {
+    cursor: not-allowed;
+    opacity: .8;
+    color: rgba(130, 112, 231, 0.9);
+}
+
+.button[disabled]:hover {
+    border-color: rgba(86, 120, 229, .9);
+    color: rgba(130, 112, 231, 0.9);
+    background-image: radial-gradient(ellipse at top, rgb(102, 21, 134), transparent 60%),
+            radial-gradient(ellipse at bottom, rgb(104, 78, 196), transparent 60%),
+            linear-gradient(to bottom, transparent 1%, rgba(120,120,120,.35) 50%,transparent  51%)
+}
+
+.sm {
+    font-size: 1.2rem;
+    padding: .2rem 3rem;
+}
+
+.select {
+    border: 3px solid rgb(44, 31, 91);
+    color: rgba(170, 157, 243, 0.9);
+    font-size: 1.2rem;
+    padding: .3rem;
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, transparent 1%, rgb(27, 19, 56) 100%);
+}
+
+.select:hover {
+    border: 3px solid rgb(75, 53, 153);
+}
